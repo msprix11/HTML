@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Floating background */
+.floating {
+  position: absolute;
+  bottom: -50px;
+  animation: floatUp linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+}
+
+/* Card */
+.card {
+  width: 340px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  padding: 25px;
+  text-align: center;
+  animation: pop 1s ease;
+  z-index: 10;
+}
+
+@keyframes pop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.teddy {
+  font-size: 80px;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.emoji { cursor: pointer; }
+
+.secret {
+  display: none;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff005d;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+h2 { color: #ff3366; }
+p { color: #555; font-size: 16px; }
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.yes { background: #ff3366; color: white; }
+.why { background: #ffd6e0; color: #ff3366; }
+.next { background: #ff85a2; color: white; }
+
+.slide { display: none; }
+.slide.active { display: block; }

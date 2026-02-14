@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine’s Slides 💘</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <h2>To My Danni Girl 💘</h2>
+    <div class="teddy" onclick="firstSlideSecret()">🧸</div>
+    <p>(Tap the teddy 👀)</p>
+    <p id="firstSecret" class="secret">🧸  You are the most beautiful girl I know 💗 Keep that angelic smile always 💕</p>
+    <button class="next" onclick="nextSlide()">Next 💌</button>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <h2>Little Quote <span class="emoji" onclick="showSecret(0)">🌹</span></h2>
+    <p>“You always cross my mind…<br>you live in it.” 💭💗</p>
+    <p id="secret0" class="secret">🌹 Hey, I miss you and your energy. 🥹</p>
+    <button class="next" onclick="nextSlide()">Next 💞</button>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <h2>Another One <span class="emoji" onclick="showSecret(1)">💫</span></h2>
+    <p>“With you, even ordinary days<br>feel like Valentine’s Day.” 💕</p>
+    <p id="secret1" class="secret">💫  With you it make my days lighter  ✨</p>
+    <button class="next" onclick="nextSlide()">Next 🐻</button>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide">
+    <h2>Important Question <span class="emoji" onclick="showSecret(2)">😳</span></h2>
+    <p id="secret2" class="secret">😳  I was nervous making this for you</p>
+    <p>Date tasa 14? 🌹</p>
+    <button class="yes" onclick="yesTrigger()">YES 💖</button>
+    <button class="why" onclick="whyTrigger()">WHY? 🤨</button>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide">
+    <h2 id="finalTitle">
+      <span class="emoji" onclick="lastSlideSecret()">💘</span>
+    </h2>
+    <p id="finalText">Waiting for your answer...</p>
+    <p id="lastSecret" class="secret">💘  You already mean a lot to me, and your smile is unforgettable 💖</p>
+    <button class="next" onclick="nextSlide()">Finish 🎉</button>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
